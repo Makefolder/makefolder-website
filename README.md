@@ -1,5 +1,16 @@
 ![banner](./src/assets/banner-portfolio.png)
 
+# Portfolio website
+
+<div align="center">
+  <img src="https://img.shields.io/badge/framework-SolidJS-darkcyan?logo=Solid&logoColor=blue" />
+  <img src="https://img.shields.io/badge/frontend-TypeScript-blue?logo=TypeScript&logoColor=blue" />
+  <img src="https://img.shields.io/badge/backend-Gleam-pink?logo=Gleam&logoColor=pink" />
+  <a href="https://choosealicense.com/licenses/apache-2.0/">
+    <img src="https://img.shields.io/badge/license-Apache-somelime" />
+  </a>
+</div>
+
 ## Usage
 
 Those templates dependencies are maintained via [pnpm](https://pnpm.io) via `pnpm up -Lri`.
