@@ -1,0 +1,189 @@
+import type { Component } from "solid-js";
+import { For } from "solid-js";
+
+import { MainSec } from "./components/MainSec";
+import { NavLink } from "./components/NavLink";
+import { SocMedia } from "./components/SocMedia";
+import { Card } from "./components/Card";
+import { Section } from "./components/Section";
+
+import type { Project } from "./types/Project";
+
+import github from "./assets/github.svg";
+import linkedin from "./assets/linkedin.svg";
+import telegram from "./assets/telegram.svg";
+import whatsapp from "./assets/whatsapp.svg";
+import banner from "./assets/banner.png";
+import banner2 from "./assets/banner2.png";
+import portfolio from "./assets/banner-portfolio.png";
+
+const App: Component = () => {
+  const experience: Project[] = [
+    {
+      name: "Olywka",
+      desc: `Olywka is a commercial Ukrainian clothing online shop. 
+          My task in the team is backend development and server configuration.`,
+      url: "https://olywka-shop.com.ua/",
+      date: "2024 – Present",
+      tags: [{ name: "Go" }, { name: "React" }],
+    },
+  ];
+  const projects: Project[] = [
+    {
+      name: "Deployer",
+      desc: `LMDB is a local movie database. Worked as fullstack developer.`,
+      date: "2024",
+      tags: [{ name: "Rust" }],
+    },
+    {
+      name: "Portfolio",
+      desc: `LMDB is a local movie database. Worked as fullstack developer.`,
+      date: "2024",
+      url: "/",
+      image: portfolio,
+      tags: [{ name: "Solidjs" }, { name: "TypeScript" }, { name: "Gleam" }],
+    },
+    {
+      name: "Cnake",
+      desc: `LMDB is a local movie database. Worked as fullstack developer.`,
+      url: "https://github.com/tofuddreg/cnake",
+      date: "2024",
+      tags: [{ name: "C" }],
+    },
+    {
+      name: "IRC-lib",
+      desc: `LMDB is a local movie database. Worked as fullstack developer.`,
+      url: "https://github.com/tofuddreg/irclib",
+      date: "2024",
+      image: banner2,
+      tags: [{ name: "C" }],
+    },
+    {
+      name: "LMDB",
+      desc: `LMDB is a local movie database. Worked as fullstack developer.`,
+      url: "https://github.com/tofuddreg/lmdb",
+      date: "2024",
+      image: banner,
+      tags: [{ name: "Go" }, { name: "Svelte" }, { name: "JavaScript" }],
+    },
+    {
+      name: "Discord bot",
+      desc: `LMDB is a local movie database. Worked as fullstack developer.`,
+      url: "https://github.com/tofuddreg/aegibot",
+      date: "2023",
+      tags: [{ name: "Java" }],
+    },
+  ];
+
+  return (
+    <div class="max-w-[1190px] mx-auto">
+      <div class="flex justify-between max-h-screen">
+        {/* left-side */}
+        <div class="flex flex-col justify-between my-[100px]">
+          <MainSec />
+          <div>
+            <NavLink selected={true} link="#about-me" title="About Me" />
+            <NavLink selected={false} link="#education" title="Education" />
+            <NavLink selected={false} link="#experience" title="Experience" />
+            <NavLink selected={false} link="#projects" title="Projects">
+              <div
+                class="
+              absolute -right-7 -top-1 z-10 
+              font-normal text-[0.8rem] text-[#2f2f2f]
+              leading-none px-[0.5rem] py-[0.12rem] bg-[#D0DDFF]/60 rounded-[0.8rem]"
+              >
+                {projects.length}
+              </div>
+            </NavLink>
+          </div>
+          <div class="flex gap-[4.8rem]">
+            <SocMedia icon={telegram} url="https://github.com/tofuddreg" />
+            <SocMedia icon={whatsapp} url="https://github.com/tofuddreg" />
+            <SocMedia icon={github} url="https://github.com/tofuddreg" />
+            <SocMedia icon={linkedin} url="https://github.com/tofuddreg" />
+          </div>
+        </div>
+
+        {/* right-side */}
+        <div class="max-w-[580px] overflow-y-scroll">
+          <div class="flex flex-col gap-[4.8rem] my-[100px]">
+            <Section id="about-me" title="About me">
+              <p class="text-[#94A3B8]">
+                I am a self-taught programmer with a strong passion for learning
+                new technologies and programming languages. I am known for my
+                curiosity, problem-solving skills, and dedication to delivering
+                quality work on time.
+              </p>
+              <p class="text-[#94A3B8]">
+                I am open-minded, responsible, good in English and Slovak,
+                fluent in Ukrainian and Russian.
+              </p>
+            </Section>
+
+            <Section id="education" title="Education">
+              <Card
+                hover={false}
+                section="education"
+                date="2024 – Present"
+                title="Technical University of Košice"
+                desc="I have applied to a university to study Cyber Security, 
+              where I hope to further develop my skills and contribute to the field."
+              />
+              <Card
+                hover={false}
+                section="education"
+                date="2020 – 2021"
+                title="3D Maya Artist"
+                desc="It is a long established fact that a 
+              reader will be distracted by the readable 
+              content of a page when looking at its layout."
+              />
+            </Section>
+
+            <Section id="experience" title="Experience">
+              <For each={experience}>
+                {(item, index) => {
+                  return (
+                    <Card
+                      index={index()}
+                      hover={true}
+                      section="experience"
+                      image={item.image}
+                      date={item.date}
+                      url={item.url}
+                      desc={item.desc}
+                      title={item.name}
+                      tags={item.tags}
+                    />
+                  );
+                }}
+              </For>
+            </Section>
+
+            <Section id="projects" title="Projects">
+              <For each={projects}>
+                {(item, index) => {
+                  return (
+                    <Card
+                      index={index()}
+                      hover={true}
+                      section="projects"
+                      image={item.image}
+                      date={item.date}
+                      url={item.url}
+                      desc={item.desc}
+                      title={item.name}
+                      tags={item.tags}
+                    />
+                  );
+                }}
+              </For>
+            </Section>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default App;

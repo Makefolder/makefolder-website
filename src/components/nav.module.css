@@ -1,0 +1,30 @@
+.style {
+  opacity: 70%;
+  color: #94a3b8;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  padding-left: 5.1rem;
+}
+
+.style::before {
+  content: "";
+  width: 4.5rem;
+  height: 2px;
+  background: #94a3b8;
+
+  position: absolute;
+  bottom: 47%;
+  left: 0;
+  z-index: 10;
+}
+
+.style:hover {
+  opacity: 100%;
+  color: #f0f0f0;
+}
+
+.style:hover::before {
+  background: #f0f0f0;
+}
