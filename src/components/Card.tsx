@@ -50,30 +50,28 @@ export const Card: Component<{
       <a
         href={props.url}
         target="_blank"
-        class="flex justify-between flex-grow"
+        class="hidden sm:flex justify-between flex-grow flex-shrink-0 min-w-[20rem]"
       >
-        <div>
-          <Show
-            when={props.image !== undefined && props.image !== ""}
-            fallback={
-              <div class="text-[#94A3B8]/90 tracking-[0.8px] font-bold uppercase">
-                {props.date}
-              </div>
-            }
-          >
-            <div class="text-[#94A3B8]/90 tracking-[0.8px] font-bold uppercase w-[16rem] h-[10rem]">
-              <img
-                class="object-cover w-full h-full rounded-[8px]"
-                src={props.image}
-                alt="preview"
-              />
+        <Show
+          when={props.image !== undefined && props.image !== ""}
+          fallback={
+            <div class="text-[#94A3B8]/90 tracking-[0.8px] font-bold uppercase">
+              {props.date}
             </div>
-          </Show>
-        </div>
+          }
+        >
+          <div class="text-[#94A3B8]/90 tracking-[0.8px] font-bold uppercase w-[16rem] h-[10rem]">
+            <img
+              class="object-cover w-full h-full rounded-[8px]"
+              src={props.image}
+              alt="preview"
+            />
+          </div>
+        </Show>
       </a>
-      <div>
+      <div class="overflow-hidden">
         <a href={props.url} target="_blank">
-          <div class="w-[35rem] flex flex-col gap-4">
+          <div class="flex flex-col gap-4">
             <div class="flex items-center gap-2">
               <div
                 class="transition leading-tight"
@@ -91,7 +89,7 @@ export const Card: Component<{
           </div>
         </a>
         <Show when={props?.tags !== undefined && props?.tags.length > 0}>
-          <div class="w-[35rem] ml-auto mt-[1rem]">
+          <div class="sm:ml-auto mt-[1rem]">
             <div class="flex flex-wrap gap-[1rem]">
               <For each={props?.tags}>
                 {(item) => {

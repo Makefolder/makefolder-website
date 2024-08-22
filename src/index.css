@@ -29,6 +29,61 @@ h4 {
   @apply text-[#D0DDFF] font-medium;
 }
 
+/* LEFT SECTION BREAKPOINTS */
+
+.main__info {
+  display: flex;
+  justify-content: end;
+}
+
+.page__content {
+  position: relative;
+}
+
+.main__wrapper {
+  position: absolute;
+}
+
+.main__inner {
+  position: fixed;
+}
+
+@media (max-width: 1023px) {
+  html {
+    font-size: 16px;
+  }
+  nav {
+    display: none;
+  }
+  .page__content,
+  .main__wrapper,
+  .main__inner {
+    position: static;
+  }
+  .main__info {
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+  }
+  .main__media {
+    justify-content: center;
+  }
+  .main__container {
+    padding: 40px 0;
+  }
+  .right__resize {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    padding: 0 24px;
+  }
+}
+
+/* END */
+
 .selected {
   color: #f0f0f0;
   padding-left: 8.6rem;

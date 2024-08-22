@@ -1,8 +1,8 @@
 import type { Component } from "solid-js";
-import { For, Show } from "solid-js";
+import { For } from "solid-js";
 
 import { MainSec } from "./components/MainSec";
-import { NavLink } from "./components/NavLink";
+import { Navbar } from "./components/Navbar";
 import { SocMedia } from "./components/SocMedia";
 import { Card } from "./components/Card";
 import { Section } from "./components/Section";
@@ -98,48 +98,26 @@ const App: Component = () => {
   ];
 
   return (
-    <div class="max-w-[1190px] mx-auto">
-      <div class="flex justify-between max-h-screen">
+    <div class="page__content lg:max-w-[1190px] mx-auto">
+      <div class="main__info">
         {/* left-side */}
-        <div class="flex flex-col justify-between my-[100px]">
-          <MainSec />
-          <nav>
-            <For each={links}>
-              {(item) => (
-                <Show
-                  when={item.amount !== undefined && item.amount > 0}
-                  fallback={
-                    <NavLink
-                      selected={false}
-                      link={item.url}
-                      title={item.name}
-                    />
-                  }
-                >
-                  <NavLink selected={false} link="#projects" title="Projects">
-                    <div
-                      class="
-                      absolute -right-7 -top-1 z-10 
-                      font-normal text-[0.8rem] text-[#2f2f2f]
-                      leading-none px-[0.5rem] py-[0.12rem] bg-[#D0DDFF]/60 rounded-[0.8rem]"
-                    >
-                      {projects.length}
-                    </div>
-                  </NavLink>
-                </Show>
-              )}
-            </For>
-          </nav>
-          <div class="flex gap-[4.8rem] flex-wrap">
-            <SocMedia icon={telegram} url="https://github.com/tofuddreg" />
-            <SocMedia icon={whatsapp} url="https://github.com/tofuddreg" />
-            <SocMedia icon={github} url="https://github.com/tofuddreg" />
-            <SocMedia icon={linkedin} url="https://github.com/tofuddreg" />
+        <div class="main__wrapper left-0 top-0">
+          <div class="main__inner">
+            <div class="main__container flex flex-col justify-between py-[100px] h-screen">
+              <MainSec />
+              <Navbar links={links} />
+              <div class="main__media flex gap-[2rem] sm:gap-[4.8rem] flex-wrap">
+                <SocMedia icon={telegram} url="https://github.com/tofuddreg" />
+                <SocMedia icon={whatsapp} url="https://github.com/tofuddreg" />
+                <SocMedia icon={github} url="https://github.com/tofuddreg" />
+                <SocMedia icon={linkedin} url="https://github.com/tofuddreg" />
+              </div>
+            </div>
           </div>
         </div>
 
         {/* right-side */}
-        <div class="max-w-[580px] flex flex-col flex-shrink-0 gap-[4.8rem] my-[100px]">
+        <div class="right__resize max-w-[580px] flex flex-col flex-shrink-0 gap-[4.8rem] my-[100px]">
           <Section id="about-me" title="About me">
             <p class="text-[#94A3B8]">
               I am a self-taught programmer with a strong passion for learning

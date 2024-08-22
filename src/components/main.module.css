@@ -1,0 +1,13 @@
+@media (max-width: 1023px) {
+  .name {
+    font-size: 8rem;
+    line-height: 8rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .name {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+}

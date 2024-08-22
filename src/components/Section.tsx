@@ -6,9 +6,9 @@ export const Section: Component<{
   children: JSX.Element;
 }> = (props): JSX.Element => {
   return (
-    <section id={props.id} class="flex flex-col gap-[1rem]">
+    <section id={props.id} class="flex flex-col gap-[2rem] sm:gap-[1rem]">
       <h4>{props.title}</h4>
-      <div class="flex flex-col gap-[2rem]">{props.children}</div>
+      <div class="flex flex-col gap-[3rem] sm:gap-[2rem]">{props.children}</div>
     </section>
   );
 };
