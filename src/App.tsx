@@ -117,7 +117,7 @@ const App: Component = () => {
         </div>
 
         {/* right-side */}
-        <div class="right__resize max-w-[580px] flex flex-col flex-shrink-0 gap-[4.8rem] my-[100px]">
+        <div class="right__resize max-w-[580px] flex flex-col flex-shrink-0 gap-[8.8rem] my-[100px]">
           <Section id="about-me" title="About me">
             <p class="text-[#94A3B8]">
               I am a self-taught programmer with a strong passion for learning

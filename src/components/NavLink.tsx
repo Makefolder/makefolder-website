@@ -29,7 +29,6 @@ export const NavLink: Component<{
         onClick={(e) => {
           scrollToSection(e, props.link);
         }}
-        onMouseEnter={() => {}}
         href={props.link}
         class="uppercase relative"
         classList={{ selected: props.selected, [nav.style]: !props.selected }}
