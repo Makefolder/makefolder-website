@@ -9,8 +9,8 @@ html {
 }
 
 body {
-  overflow: hidden;
-  background: linear-gradient(154.46deg, #0c1322 25.78%, #2a6b5a 130.45%);
+  /* overflow-x: hidden; */
+  background: linear-gradient(154.46deg, #0c1322 25.78%, #2a6b5a 130.45%) fixed;
   padding: 0 10px;
   margin: 0;
   height: 100vh;

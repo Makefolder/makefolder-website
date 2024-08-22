@@ -1,5 +1,5 @@
 import type { Component } from "solid-js";
-import { For } from "solid-js";
+import { For, Show } from "solid-js";
 
 import { MainSec } from "./components/MainSec";
 import { NavLink } from "./components/NavLink";
@@ -8,6 +8,7 @@ import { Card } from "./components/Card";
 import { Section } from "./components/Section";
 
 import type { Project } from "./types/Project";
+import type { Link } from "./types/Link";
 
 import github from "./assets/github.svg";
 import linkedin from "./assets/linkedin.svg";
@@ -28,6 +29,7 @@ const App: Component = () => {
       tags: [{ name: "Go" }, { name: "React" }],
     },
   ];
+
   const projects: Project[] = [
     {
       name: "Deployer",
@@ -75,28 +77,60 @@ const App: Component = () => {
     },
   ];
 
+  const links: Link[] = [
+    {
+      name: "About me",
+      url: "#about-me",
+    },
+    {
+      name: "Education",
+      url: "#education",
+    },
+    {
+      name: "Experience",
+      url: "#experience",
+    },
+    {
+      name: "Projects",
+      url: "#projects",
+      amount: 5,
+    },
+  ];
+
   return (
     <div class="max-w-[1190px] mx-auto">
       <div class="flex justify-between max-h-screen">
         {/* left-side */}
         <div class="flex flex-col justify-between my-[100px]">
           <MainSec />
-          <div>
-            <NavLink selected={true} link="#about-me" title="About Me" />
-            <NavLink selected={false} link="#education" title="Education" />
-            <NavLink selected={false} link="#experience" title="Experience" />
-            <NavLink selected={false} link="#projects" title="Projects">
-              <div
-                class="
-              absolute -right-7 -top-1 z-10 
-              font-normal text-[0.8rem] text-[#2f2f2f]
-              leading-none px-[0.5rem] py-[0.12rem] bg-[#D0DDFF]/60 rounded-[0.8rem]"
-              >
-                {projects.length}
-              </div>
-            </NavLink>
-          </div>
-          <div class="flex gap-[4.8rem]">
+          <nav>
+            <For each={links}>
+              {(item) => (
+                <Show
+                  when={item.amount !== undefined && item.amount > 0}
+                  fallback={
+                    <NavLink
+                      selected={false}
+                      link={item.url}
+                      title={item.name}
+                    />
+                  }
+                >
+                  <NavLink selected={false} link="#projects" title="Projects">
+                    <div
+                      class="
+                      absolute -right-7 -top-1 z-10 
+                      font-normal text-[0.8rem] text-[#2f2f2f]
+                      leading-none px-[0.5rem] py-[0.12rem] bg-[#D0DDFF]/60 rounded-[0.8rem]"
+                    >
+                      {projects.length}
+                    </div>
+                  </NavLink>
+                </Show>
+              )}
+            </For>
+          </nav>
+          <div class="flex gap-[4.8rem] flex-wrap">
             <SocMedia icon={telegram} url="https://github.com/tofuddreg" />
             <SocMedia icon={whatsapp} url="https://github.com/tofuddreg" />
             <SocMedia icon={github} url="https://github.com/tofuddreg" />
@@ -105,81 +139,79 @@ const App: Component = () => {
         </div>
 
         {/* right-side */}
-        <div class="max-w-[580px] overflow-y-scroll">
-          <div class="flex flex-col gap-[4.8rem] my-[100px]">
-            <Section id="about-me" title="About me">
-              <p class="text-[#94A3B8]">
-                I am a self-taught programmer with a strong passion for learning
-                new technologies and programming languages. I am known for my
-                curiosity, problem-solving skills, and dedication to delivering
-                quality work on time.
-              </p>
-              <p class="text-[#94A3B8]">
-                I am open-minded, responsible, good in English and Slovak,
-                fluent in Ukrainian and Russian.
-              </p>
-            </Section>
+        <div class="max-w-[580px] flex flex-col flex-shrink-0 gap-[4.8rem] my-[100px]">
+          <Section id="about-me" title="About me">
+            <p class="text-[#94A3B8]">
+              I am a self-taught programmer with a strong passion for learning
+              new technologies and programming languages. I am known for my
+              curiosity, problem-solving skills, and dedication to delivering
+              quality work on time.
+            </p>
+            <p class="text-[#94A3B8]">
+              I am open-minded, responsible, good in English and Slovak, fluent
+              in Ukrainian and Russian.
+            </p>
+          </Section>
 
-            <Section id="education" title="Education">
-              <Card
-                hover={false}
-                section="education"
-                date="2024 – Present"
-                title="Technical University of Košice"
-                desc="I have applied to a university to study Cyber Security, 
+          <Section id="education" title="Education">
+            <Card
+              hover={false}
+              section="education"
+              date="2024 – Present"
+              title="Technical University of Košice"
+              desc="I have applied to a university to study Cyber Security, 
               where I hope to further develop my skills and contribute to the field."
-              />
-              <Card
-                hover={false}
-                section="education"
-                date="2020 – 2021"
-                title="3D Maya Artist"
-                desc="It is a long established fact that a 
+            />
+            <Card
+              hover={false}
+              section="education"
+              date="2020 – 2021"
+              title="3D Maya Artist"
+              desc="It is a long established fact that a 
               reader will be distracted by the readable 
               content of a page when looking at its layout."
-              />
-            </Section>
+            />
+          </Section>
 
-            <Section id="experience" title="Experience">
-              <For each={experience}>
-                {(item, index) => {
-                  return (
-                    <Card
-                      index={index()}
-                      hover={true}
-                      section="experience"
-                      image={item.image}
-                      date={item.date}
-                      url={item.url}
-                      desc={item.desc}
-                      title={item.name}
-                      tags={item.tags}
-                    />
-                  );
-                }}
-              </For>
-            </Section>
+          <Section id="experience" title="Experience">
+            <For each={experience}>
+              {(item, index) => {
+                return (
+                  <Card
+                    index={index()}
+                    hover={true}
+                    section="experience"
+                    image={item.image}
+                    date={item.date}
+                    url={item.url}
+                    desc={item.desc}
+                    title={item.name}
+                    tags={item.tags}
+                  />
+                );
+              }}
+            </For>
+          </Section>
 
-            <Section id="projects" title="Projects">
-              <For each={projects}>
-                {(item, index) => {
-                  return (
-                    <Card
-                      index={index()}
-                      hover={true}
-                      section="projects"
-                      image={item.image}
-                      date={item.date}
-                      url={item.url}
-                      desc={item.desc}
-                      title={item.name}
-                      tags={item.tags}
-                    />
-                  );
-                }}
-              </For>
-            </Section>
-          </div>
+          <Section id="projects" title="Projects">
+            <For each={projects}>
+              {(item, index) => {
+                return (
+                  <Card
+                    index={index()}
+                    hover={true}
+                    section="projects"
+                    image={item.image}
+                    date={item.date}
+                    url={item.url}
+                    desc={item.desc}
+                    title={item.name}
+                    tags={item.tags}
+                  />
+                );
+              }}
+            </For>
+          </Section>
         </div>
       </div>
     </div>
