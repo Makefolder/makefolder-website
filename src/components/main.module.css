@@ -5,7 +5,7 @@
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 640px) {
   .name {
     font-size: 4rem;
     line-height: 4rem;

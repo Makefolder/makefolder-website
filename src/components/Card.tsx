@@ -50,7 +50,7 @@ export const Card: Component<{
       <a
         href={props.url}
         target="_blank"
-        class="hidden sm:flex justify-between flex-grow flex-shrink-0 min-w-[20rem]"
+        class="hidden lg:flex justify-between flex-grow flex-shrink-0 min-w-[20rem]"
       >
         <Show
           when={props.image !== undefined && props.image !== ""}
