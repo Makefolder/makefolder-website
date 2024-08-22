@@ -93,7 +93,7 @@ const App: Component = () => {
     {
       name: "Projects",
       url: "#projects",
-      amount: 5,
+      amount: projects.length,
     },
   ];
 
