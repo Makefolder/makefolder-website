@@ -101,8 +101,6 @@ export const Card: Component<{
                     <TagComp
                       active={false}
                       tag={item}
-                      tags={props.tags}
-                      url={item.name}
                       sectionTags={props.sectionTags}
                     />
                   );

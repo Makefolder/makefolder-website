@@ -28,7 +28,6 @@ export const Section: Component<{
                   <Tag
                     active={true}
                     tag={item}
-                    url={item.name}
                     sectionTags={props.sectionTags}
                     index={index()}
                   />

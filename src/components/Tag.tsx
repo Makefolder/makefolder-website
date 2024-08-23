@@ -7,14 +7,12 @@ import cross from "../assets/cross.png";
 export const Tag: Component<{
   active: boolean;
   tag: TagType;
-  url: string;
   sectionTags?: {
     tags: Accessor<{ name: string }[]>;
     setTags: Setter<{ name: string }[]>;
   };
   index?: number;
 }> = (props): JSX.Element => {
-  const url: string = `#${props.url}`;
   const setActive = (isActive: boolean): void => {
     if (props.sectionTags === undefined) return;
     if (isActive) {
@@ -54,7 +52,7 @@ export const Tag: Component<{
     <Show
       when={!props.active}
       fallback={
-        <a onClick={() => setActive(props.active)} href={url} class="block">
+        <button onClick={() => setActive(props.active)} class="block">
           <div
             class="flex items-center gap-4
            text-[#0d0d0d] text-[1.4rem] bg-[#94DEC8] 
@@ -66,17 +64,17 @@ export const Tag: Component<{
               <img src={cross} alt="" class="object-contain w-full h-full" />
             </div>
           </div>
-        </a>
+        </button>
       }
     >
-      <a onClick={() => setActive(props.active)} href={url} class="block">
+      <button onClick={() => setActive(props.active)} class="block">
         <div
           class="text-[#94DEC8] text-[1.4rem] px-[1rem] rounded-full border border-[#94DEC8]
         hover:bg-[#94DEC8] hover:text-[#0d0d0d] transition"
         >
           {props.tag.name}
         </div>
-      </a>
+      </button>
     </Show>
   );
 };
