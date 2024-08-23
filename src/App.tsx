@@ -114,11 +114,6 @@ const App: Component = () => {
       icon: telegram,
     },
     {
-      name: "whatsapp",
-      url: "mailto:artemii.fedotov@tutamail.com",
-      icon: mail,
-    },
-    {
       name: "github",
       url: "https://github.com/tofuddreg",
       icon: github,
@@ -127,6 +122,11 @@ const App: Component = () => {
       name: "linkedin",
       url: "https://www.linkedin.com/in/artemii-fedotov-77809b260/",
       icon: linkedin,
+    },
+    {
+      name: "whatsapp",
+      url: "mailto:artemii.fedotov@tutamail.com",
+      icon: mail,
     },
   ];
 
