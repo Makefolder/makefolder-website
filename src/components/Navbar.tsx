@@ -3,6 +3,7 @@ import { For, Show } from "solid-js";
 
 import { Link } from "../types/Link";
 import { NavLink } from "./NavLink";
+import nav from "./nav.module.css";
 
 export const Navbar: Component<{ links: Link[] }> = (props): JSX.Element => {
   const [activeLink, setActiveLink] = createSignal<string>("");
@@ -56,7 +57,11 @@ export const Navbar: Component<{ links: Link[] }> = (props): JSX.Element => {
                 class="
                   absolute -right-7 -top-1 z-10 
                   font-normal text-[0.8rem] text-[#2f2f2f]
-                  leading-none px-[0.5rem] py-[0.12rem] bg-[#D0DDFF]/60 rounded-[0.8rem]"
+                  leading-none px-[0.5rem] py-[0.12rem] rounded-[0.8rem]"
+                classList={{
+                  [nav.children]: true,
+                  [nav.children__active]: activeLink() === item.url,
+                }}
               >
                 {item?.amount}
               </div>

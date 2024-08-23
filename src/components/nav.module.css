@@ -33,3 +33,12 @@
   background: #f0f0f0;
   width: 8rem;
 }
+
+.children {
+  background-color: #94a3b8;
+}
+
+.style:hover .children,
+.children__active {
+  background-color: #f0f0f0;
+}
