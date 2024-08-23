@@ -72,7 +72,7 @@ export const Card: Component<{
       <div class="overflow-hidden">
         <a href={props.url} target="_blank">
           <div class="flex flex-col gap-4">
-            <div class="flex items-center gap-2">
+            <div class="flex items-center w-[35rem] gap-2">
               <div
                 class="transition leading-tight"
                 classList={{ [card.props_title]: true }}
