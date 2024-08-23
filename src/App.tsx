@@ -48,14 +48,8 @@ const App: Component = () => {
 
   const projects: Project[] = [
     {
-      name: "Deployer",
-      desc: `LMDB is a local movie database. Worked as fullstack developer.`,
-      date: "2024",
-      tags: [{ name: "Rust" }],
-    },
-    {
       name: "Portfolio",
-      desc: `LMDB is a local movie database. Worked as fullstack developer.`,
+      desc: `My portfolio website.`,
       date: "2024",
       url: "/",
       image: portfolio,
@@ -63,14 +57,14 @@ const App: Component = () => {
     },
     {
       name: "Cnake",
-      desc: `LMDB is a local movie database. Worked as fullstack developer.`,
+      desc: `It's not like "Snake"! Fundamentally different concept!`,
       url: "https://github.com/tofuddreg/cnake",
       date: "2024",
       tags: [{ name: "C" }],
     },
     {
       name: "IRC-lib",
-      desc: `LMDB is a local movie database. Worked as fullstack developer.`,
+      desc: `Simple Internet Relay Chat library for C.`,
       url: "https://github.com/tofuddreg/irclib",
       date: "2024",
       image: banner2,
@@ -78,7 +72,7 @@ const App: Component = () => {
     },
     {
       name: "LMDB",
-      desc: `LMDB is a local movie database. Worked as fullstack developer.`,
+      desc: `LMDB is a local movie database.`,
       url: "https://github.com/tofuddreg/lmdb",
       date: "2024",
       image: banner,
@@ -86,7 +80,7 @@ const App: Component = () => {
     },
     {
       name: "Discord bot",
-      desc: `LMDB is a local movie database. Worked as fullstack developer.`,
+      desc: `Discord bot for servers written in Java.`,
       url: "https://github.com/tofuddreg/aegibot",
       date: "2023",
       tags: [{ name: "Java" }],
