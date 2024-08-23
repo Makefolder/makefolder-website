@@ -32,7 +32,7 @@ const App: Component = () => {
       desc: `I acquired the skill of creating 3D models on this course. 
       I have experience of working in such programs as Maya, UE5, Rizom UV, 
       Marmoset Toolbag and Substance Painter.`,
-    }
+    },
   ];
 
   const experience: Project[] = [
@@ -150,13 +150,15 @@ const App: Component = () => {
           <Section id="education" title="Education">
             <For each={education}>
               {(item) => {
-                <Card
-                  hover={false}
-                  section="education"
-                  date={item.date}
-                  title={item.name}
-                  desc={item.desc}
-                />
+                return (
+                  <Card
+                    hover={false}
+                    section="education"
+                    date={item.date}
+                    title={item.name}
+                    desc={item.desc}
+                  />
+                );
               }}
             </For>
           </Section>

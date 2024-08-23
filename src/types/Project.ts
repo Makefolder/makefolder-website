@@ -5,6 +5,6 @@ export type Project = {
   desc: string;
   url?: string;
   date: string;
-  tags: Tag[];
+  tags?: Tag[];
   image?: string;
 };
