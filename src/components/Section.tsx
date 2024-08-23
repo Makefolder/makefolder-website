@@ -9,7 +9,8 @@ export const Section: Component<{
   id: string;
   children: JSX.Element;
 }> = (props): JSX.Element => {
-  const tags: TagType[] = [{ name: "Nim" }, { name: "C++" }, { name: "C" }];
+  // const tags: TagType[] = [{ name: "Nim" }, { name: "C++" }, { name: "C" }];
+  const tags: TagType[] = [];
   return (
     <section id={props.id} class="flex flex-col gap-[2rem] sm:gap-[1rem]">
       <h4>{props.title}</h4>
