@@ -107,14 +107,21 @@ const App: Component = () => {
     },
   ];
 
-  const [tags, setTags] = createSignal(new Array<{ name: string }>());
-  const filteredProjects = createMemo(() =>
-    projects.filter((project) =>
-      tags().every((tag) =>
-        project.tags?.some((projectTag) => projectTag.name === tag.name)
-      )
-    )
+  const [tagsExperience, setTagsExperience] = createSignal(
+    new Array<{ name: string }>()
   );
+
+  const [tags, setTags] = createSignal(new Array<{ name: string }>());
+
+  const filteredProjects = (tags: { name: string }[], cards: Project[]) => {
+    return createMemo(() =>
+      cards.filter((project) =>
+        tags.every((tag) =>
+          project.tags?.some((projectTag) => projectTag.name === tag.name)
+        )
+      )
+    );
+  };
 
   return (
     <div class="page__content lg:max-w-[1190px] mx-auto">
@@ -166,8 +173,12 @@ const App: Component = () => {
             </For>
           </Section>
 
-          <Section id="experience" title="Experience">
-            <For each={experience}>
+          <Section
+            sectionTags={{ tags: tagsExperience, setTags: setTagsExperience }}
+            id="experience"
+            title="Experience"
+          >
+            <For each={filteredProjects(tagsExperience(), experience)()}>
               {(item, index) => {
                 return (
                   <Card
@@ -180,6 +191,10 @@ const App: Component = () => {
                     desc={item.desc}
                     title={item.name}
                     tags={item.tags}
+                    sectionTags={{
+                      tags: tagsExperience,
+                      setTags: setTagsExperience,
+                    }}
                   />
                 );
               }}
@@ -191,7 +206,7 @@ const App: Component = () => {
             id="projects"
             title="Projects"
           >
-            <For each={filteredProjects()}>
+            <For each={filteredProjects(tags(), projects)()}>
               {(item, index) => {
                 return (
                   <Card

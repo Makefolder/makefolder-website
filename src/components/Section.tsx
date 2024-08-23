@@ -15,7 +15,7 @@ export const Section: Component<{
   return (
     <section id={props.id} class="flex flex-col gap-[2rem] sm:gap-[1rem]">
       <h4>{props.title}</h4>
-      <div class="flex gap-4">
+      <div class="flex gap-4 flex-wrap">
         <Show when={props.sectionTags !== undefined}>
           <For
             each={
