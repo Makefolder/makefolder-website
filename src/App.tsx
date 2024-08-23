@@ -76,7 +76,7 @@ const App: Component = () => {
       url: "https://github.com/tofuddreg/lmdb",
       date: "2024",
       image: banner,
-      tags: [{ name: "Go" }, { name: "Svelte" }, { name: "JavaScript" }],
+      tags: [{ name: "Go" }, { name: "Svelte" }, { name: "TypeScript" }],
     },
     {
       name: "Discord bot",
