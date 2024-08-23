@@ -13,7 +13,7 @@ import type { Link } from "./types/Link";
 import github from "./assets/github.svg";
 import linkedin from "./assets/linkedin.svg";
 import telegram from "./assets/telegram.svg";
-import whatsapp from "./assets/whatsapp.svg";
+import mail from "./assets/mail.svg";
 import banner from "./assets/banner.png";
 import banner2 from "./assets/banner2.png";
 import portfolio from "./assets/banner-portfolio.png";
@@ -107,6 +107,29 @@ const App: Component = () => {
     },
   ];
 
+  const soc_media: Link[] = [
+    {
+      name: "telegram",
+      url: "https://t.me/tofuddreg",
+      icon: telegram,
+    },
+    {
+      name: "whatsapp",
+      url: "mailto:artemii.fedotov@tutamail.com",
+      icon: mail,
+    },
+    {
+      name: "github",
+      url: "https://github.com/tofuddreg",
+      icon: github,
+    },
+    {
+      name: "linkedin",
+      url: "https://www.linkedin.com/in/artemii-fedotov-77809b260/",
+      icon: linkedin,
+    },
+  ];
+
   const [tagsExperience, setTagsExperience] = createSignal(
     new Array<{ name: string }>()
   );
@@ -133,10 +156,9 @@ const App: Component = () => {
               <MainSec />
               <Navbar links={links} />
               <div class="main__media flex gap-[2rem] sm:gap-[4.8rem] flex-wrap">
-                <SocMedia icon={telegram} url="https://github.com/tofuddreg" />
-                <SocMedia icon={whatsapp} url="https://github.com/tofuddreg" />
-                <SocMedia icon={github} url="https://github.com/tofuddreg" />
-                <SocMedia icon={linkedin} url="https://github.com/tofuddreg" />
+                <For each={soc_media}>
+                  {(item) => <SocMedia icon={item.icon ?? ""} url={item.url} />}
+                </For>
               </div>
             </div>
           </div>
