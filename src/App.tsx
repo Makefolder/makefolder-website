@@ -19,6 +19,22 @@ import banner2 from "./assets/banner2.png";
 import portfolio from "./assets/banner-portfolio.png";
 
 const App: Component = () => {
+  const education: Project[] = [
+    {
+      date: "2024 – Present",
+      name: "Technical University of Košice",
+      desc: `I have applied to a university to study Cyber Security, 
+      where I hope to further develop my skills and contribute to the field.`,
+    },
+    {
+      date: "2020 – 2021",
+      name: "3D Maya Artist",
+      desc: `I acquired the skill of creating 3D models on this course. 
+      I have experience of working in such programs as Maya, UE5, Rizom UV, 
+      Marmoset Toolbag and Substance Painter.`,
+    }
+  ];
+
   const experience: Project[] = [
     {
       name: "Olywka",
@@ -132,23 +148,17 @@ const App: Component = () => {
           </Section>
 
           <Section id="education" title="Education">
-            <Card
-              hover={false}
-              section="education"
-              date="2024 – Present"
-              title="Technical University of Košice"
-              desc="I have applied to a university to study Cyber Security, 
-              where I hope to further develop my skills and contribute to the field."
-            />
-            <Card
-              hover={false}
-              section="education"
-              date="2020 – 2021"
-              title="3D Maya Artist"
-              desc="It is a long established fact that a 
-              reader will be distracted by the readable 
-              content of a page when looking at its layout."
-            />
+            <For each={education}>
+              {(item) => {
+                <Card
+                  hover={false}
+                  section="education"
+                  date={item.date}
+                  title={item.name}
+                  desc={item.desc}
+                />
+              }}
+            </For>
           </Section>
 
           <Section id="experience" title="Experience">
