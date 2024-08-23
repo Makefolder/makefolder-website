@@ -103,8 +103,7 @@ const App: Component = () => {
         {/* left-side */}
         <div class="main__wrapper left-0 top-0">
           <div class="main__inner">
-            {/* <div class="main__container flex flex-col justify-between py-[100px] h-screen"> */}
-            <div class="main__container flex flex-col justify-between py-[100px] h-[100dvh]">
+            <div class="main__container flex flex-col justify-between py-[100px] h-[34rem] sm:h-[100dvh]">
               <MainSec />
               <Navbar links={links} />
               <div class="main__media flex gap-[2rem] sm:gap-[4.8rem] flex-wrap">
