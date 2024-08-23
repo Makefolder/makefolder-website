@@ -1,4 +1,4 @@
-import type { Component, JSX } from "solid-js";
+import type { Accessor, Component, JSX, Setter } from "solid-js";
 import { Show, For } from "solid-js";
 import { Tag as TagComp } from "./Tag";
 
@@ -15,6 +15,10 @@ export const Card: Component<{
   url?: string;
   image?: string;
   tags?: Tag[];
+  sectionTags?: {
+    tags: Accessor<{ name: string }[]>;
+    setTags: Setter<{ name: string }[]>;
+  };
   hover: boolean;
 }> = (props): JSX.Element => {
   const className: string = `${props.section}-card__item`;
@@ -93,7 +97,15 @@ export const Card: Component<{
             <div class="flex flex-wrap gap-[1rem]">
               <For each={props?.tags}>
                 {(item) => {
-                  return <TagComp tag={item} url={item.name} />;
+                  return (
+                    <TagComp
+                      active={false}
+                      tag={item}
+                      tags={props.tags}
+                      url={item.name}
+                      sectionTags={props.sectionTags}
+                    />
+                  );
                 }}
               </For>
             </div>

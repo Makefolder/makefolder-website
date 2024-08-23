@@ -1,5 +1,5 @@
 import type { Component } from "solid-js";
-import { For } from "solid-js";
+import { createSignal, For, createMemo } from "solid-js";
 
 import { MainSec } from "./components/MainSec";
 import { Navbar } from "./components/Navbar";
@@ -107,6 +107,15 @@ const App: Component = () => {
     },
   ];
 
+  const [tags, setTags] = createSignal(new Array<{ name: string }>());
+  const filteredProjects = createMemo(() =>
+    projects.filter((project) =>
+      tags().every((tag) =>
+        project.tags?.some((projectTag) => projectTag.name === tag.name)
+      )
+    )
+  );
+
   return (
     <div class="page__content lg:max-w-[1190px] mx-auto">
       <div class="main__info">
@@ -177,8 +186,12 @@ const App: Component = () => {
             </For>
           </Section>
 
-          <Section id="projects" title="Projects">
-            <For each={projects}>
+          <Section
+            sectionTags={{ tags, setTags }}
+            id="projects"
+            title="Projects"
+          >
+            <For each={filteredProjects()}>
               {(item, index) => {
                 return (
                   <Card
@@ -191,6 +204,7 @@ const App: Component = () => {
                     desc={item.desc}
                     title={item.name}
                     tags={item.tags}
+                    sectionTags={{ tags, setTags }}
                   />
                 );
               }}
