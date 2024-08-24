@@ -1,7 +1,4 @@
 ![banner](./src/assets/banner-portfolio.png)
-
-# Portfolio website
-
 <div align="center">
   <img src="https://img.shields.io/badge/framework-SolidJS-darkcyan?logo=Solid&logoColor=blue" />
   <img src="https://img.shields.io/badge/frontend-TypeScript-blue?logo=TypeScript&logoColor=blue" />
@@ -11,7 +8,37 @@
   </a>
 </div>
 
-## Usage
+# Portfolio website
+
+## API
+
+[![Package Version](https://img.shields.io/hexpm/v/api)](https://hex.pm/packages/api)
+[![Hex Docs](https://img.shields.io/badge/hex-docs-ffaff3)](https://hexdocs.pm/api/)
+
+```sh
+gleam add api@1
+```
+
+```gleam
+import api
+
+pub fn main() {
+  // TODO: An example of the project in use
+}
+```
+
+Further documentation can be found at <https://hexdocs.pm/api>.
+
+## Development
+
+```sh
+gleam run   # Run the project
+gleam test  # Run the tests
+```
+
+## Frontend
+
+### Usage
 
 Those templates dependencies are maintained via [pnpm](https://pnpm.io) via `pnpm up -Lri`.
 
@@ -42,6 +69,6 @@ It correctly bundles Solid in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.<br>
 Your app is ready to be deployed!
 
-## Deployment
+### Deployment
 
 You can deploy the `dist` folder to any static host provider (netlify, surge, now, etc.)

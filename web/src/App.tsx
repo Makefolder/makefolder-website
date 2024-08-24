@@ -23,14 +23,14 @@ const App: Component = () => {
     {
       date: "2024 – Present",
       name: "Technical University of Košice",
-      desc: `I have applied to a university to study Cyber Security, 
+      desc: `I have applied to a university to study Cyber Security,
       where I hope to further develop my skills and contribute to the field.`,
     },
     {
       date: "2020 – 2021",
       name: "3D Maya Artist",
-      desc: `I acquired the skill of creating 3D models on this course. 
-      I have experience of working in such programs as Maya, UE5, Rizom UV, 
+      desc: `I acquired the skill of creating 3D models on this course.
+      I have experience of working in such programs as Maya, UE5, Rizom UV,
       Marmoset Toolbag and Substance Painter.`,
     },
   ];
@@ -38,7 +38,7 @@ const App: Component = () => {
   const experience: Project[] = [
     {
       name: "Olywka",
-      desc: `Olywka is a commercial Ukrainian clothing online shop. 
+      desc: `Olywka is a commercial Ukrainian clothing online shop.
           My task in the team is backend development and server configuration.`,
       url: "https://olywka-shop.com.ua/",
       date: "2024 – Present",

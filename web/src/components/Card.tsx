@@ -44,7 +44,7 @@ export const Card: Component<{
     <div
       onMouseEnter={() => shadow()}
       onMouseLeave={() => unshadow()}
-      class="transition flex justify-between"
+      class="transition flex"
       classList={{
         [card.style]: props.hover,
         [className]: true,
@@ -54,7 +54,7 @@ export const Card: Component<{
       <a
         href={props.url}
         target="_blank"
-        class="hidden lg:flex justify-between flex-grow flex-shrink-0 min-w-[20rem]"
+        class="hidden lg:flex justify-start flex-shrink-0 min-w-[20rem]"
       >
         <Show
           when={props.image !== undefined && props.image !== ""}
@@ -76,7 +76,7 @@ export const Card: Component<{
       <div class="overflow-hidden">
         <a href={props.url} target="_blank">
           <div class="flex flex-col gap-4">
-            <div class="flex items-center w-[35rem] gap-2">
+            <div class="flex items-center gap-2">
               <div
                 class="transition leading-tight"
                 classList={{ [card.props_title]: true }}
