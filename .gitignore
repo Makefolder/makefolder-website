@@ -1,3 +1,5 @@
+pnpn-lock.yaml
 node_modules
 dist
-pnpn-lock.yaml
+*.db
+*.sqlite3
