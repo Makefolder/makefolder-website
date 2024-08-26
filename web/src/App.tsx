@@ -51,7 +51,7 @@ const App: Component = () => {
       name: "Portfolio",
       desc: `My portfolio website.`,
       date: "2024",
-      url: "/",
+      url: "https://github.com/tofuddreg/tofuddreg-website",
       image: portfolio,
       tags: [{ name: "Solidjs" }, { name: "TypeScript" }, { name: "Gleam" }],
     },
