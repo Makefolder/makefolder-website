@@ -3,4 +3,4 @@ node_modules
 dist
 *.db
 *.sqlite3
-.DB_STORE
+.DS_STORE
