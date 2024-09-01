@@ -48,6 +48,15 @@ const App: Component = () => {
 
   const projects: Project[] = [
     {
+      name: "Deployer",
+      desc: `Deployer will automatically check your repository for new commits, 
+      pull the newest version of your project, build and setup it as you wish.`,
+      date: "2024",
+      url: "https://github.com/tofuddreg/tofuddreg-website",
+      image: portfolio,
+      tags: [{ name: "Rust" }],
+    },
+    {
       name: "Portfolio",
       desc: `My portfolio website.`,
       date: "2024",
