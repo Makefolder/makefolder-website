@@ -51,9 +51,8 @@ const App: Component = () => {
       name: "Deployer",
       desc: `Deployer will automatically check your repository for new commits, 
       pull the newest version of your project, build and setup it as you wish.`,
-      date: "2024",
+      date: "2024 – Present",
       url: "https://github.com/tofuddreg/tofuddreg-website",
-      image: portfolio,
       tags: [{ name: "Rust" }],
     },
     {
