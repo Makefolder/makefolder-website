@@ -56,7 +56,7 @@ export const Tag: Component<{
           <div
             class="flex items-center gap-4
            text-[#0d0d0d] text-[1.4rem] bg-[#94DEC8] 
-           px-[1rem] rounded-full border border-[#94DEC8] transition
+           px-[1rem] py-[0.1rem] rounded-full border border-[#94DEC8] transition
            hover:bg-[#baf2e1]"
           >
             <div>{props.tag.name}</div>
@@ -69,7 +69,7 @@ export const Tag: Component<{
     >
       <button onClick={() => setActive(props.active)} class="block">
         <div
-          class="text-[#94DEC8] text-[1.4rem] px-[1rem] rounded-full border border-[#94DEC8]
+          class="text-[#94DEC8] text-[1.4rem] px-[1rem] py-[0.1rem] rounded-full border border-[#94DEC8]
         hover:bg-[#94DEC8] hover:text-[#0d0d0d] transition"
         >
           {props.tag.name}

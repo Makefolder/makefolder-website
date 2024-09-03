@@ -42,7 +42,7 @@ const App: Component = () => {
           My task in the team is backend development and server configuration.`,
       url: "https://olywka-shop.com.ua/",
       date: "2024 – Present",
-      tags: [{ name: "Go" }, { name: "React" }],
+      tags: [{ name: "Go" }, { name: "React" }, { name: "Backend" }],
     },
   ];
 
@@ -53,7 +53,7 @@ const App: Component = () => {
       pull the newest version of your project, build and setup it as you wish.`,
       date: "2024 – Present",
       url: "https://github.com/tofuddreg/tofuddreg-website",
-      tags: [{ name: "Rust" }],
+      tags: [{ name: "Rust" }, { name: "Software" }],
     },
     {
       name: "Portfolio",
@@ -61,14 +61,19 @@ const App: Component = () => {
       date: "2024",
       url: "https://github.com/tofuddreg/tofuddreg-website",
       image: portfolio,
-      tags: [{ name: "Solidjs" }, { name: "TypeScript" }, { name: "Gleam" }],
+      tags: [
+        { name: "Solidjs" },
+        { name: "TypeScript" },
+        { name: "Gleam" },
+        { name: "Full-stack" },
+      ],
     },
     {
       name: "Cnake",
       desc: `It's not like "Snake"! Fundamentally different concept!`,
       url: "https://github.com/tofuddreg/cnake",
       date: "2024",
-      tags: [{ name: "C" }],
+      tags: [{ name: "C" }, { name: "Software" }],
     },
     {
       name: "IRC-lib",
@@ -76,7 +81,7 @@ const App: Component = () => {
       url: "https://github.com/tofuddreg/irclib",
       date: "2024",
       image: banner2,
-      tags: [{ name: "C" }],
+      tags: [{ name: "C" }, { name: "Software" }],
     },
     {
       name: "LMDB",
@@ -84,14 +89,19 @@ const App: Component = () => {
       url: "https://github.com/tofuddreg/lmdb",
       date: "2024",
       image: banner,
-      tags: [{ name: "Go" }, { name: "Svelte" }, { name: "TypeScript" }],
+      tags: [
+        { name: "Go" },
+        { name: "Svelte" },
+        { name: "TypeScript" },
+        { name: "Full-stack" },
+      ],
     },
     {
       name: "Discord bot",
       desc: `Discord bot for servers written in Java.`,
       url: "https://github.com/tofuddreg/aegibot",
       date: "2023",
-      tags: [{ name: "Java" }],
+      tags: [{ name: "Java" }, { name: "Software" }],
     },
   ];
 
