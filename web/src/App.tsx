@@ -38,7 +38,7 @@ const App: Component = () => {
   const experience: Project[] = [
     {
       name: "Olywka",
-      desc: `Olywka is a commercial Ukrainian clothing online shop.
+      desc: `Olywka is a commercial Ukrainian online clothing shop.
           My task in the team is backend development and server configuration.`,
       url: "https://olywka-shop.com.ua/",
       date: "2024 – Present",
