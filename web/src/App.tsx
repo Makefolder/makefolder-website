@@ -12,7 +12,7 @@ import type { Link } from "./types/Link";
 
 import github from "./assets/github.svg";
 import linkedin from "./assets/linkedin.svg";
-import telegram from "./assets/telegram.svg";
+import leetcode from "./assets/leetcode.svg";
 import mail from "./assets/mail.svg";
 import banner from "./assets/banner.png";
 import banner2 from "./assets/banner2.png";
@@ -127,9 +127,9 @@ const App: Component = () => {
 
   const soc_media: Link[] = [
     {
-      name: "telegram",
-      url: "https://t.me/tofuddreg",
-      icon: telegram,
+      name: "leetcode",
+      url: "https://leetcode.com/u/aegislash525/",
+      icon: leetcode,
     },
     {
       name: "github",
@@ -142,7 +142,7 @@ const App: Component = () => {
       icon: linkedin,
     },
     {
-      name: "whatsapp",
+      name: "email",
       url: "mailto:artemii.fedotov@tutamail.com",
       icon: mail,
     },
