@@ -42,7 +42,15 @@ const App: Component = () => {
           My task in the team is backend development and server configuration.`,
       url: "https://olywka-shop.com.ua/",
       date: "2024 – Present",
-      tags: [{ name: "Go" }, { name: "TypeScript" }, { name: "Rust" }, { name: "React" }, { name: "Backend" }],
+      tags: [
+        { name: "React" },
+        { name: "Go" },
+        { name: "Rust" },
+        { name: "Bun" },
+        { name: "TypeScript" },
+        { name: "Backend" },
+        { name: "Docker" },
+      ],
     },
   ];
 
