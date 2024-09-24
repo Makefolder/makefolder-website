@@ -141,7 +141,7 @@ const App: Component = () => {
     },
     {
       name: "github",
-      url: "https://github.com/tofuddreg",
+      url: "https://github.com/makefolder",
       icon: github,
     },
     {
