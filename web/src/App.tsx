@@ -56,6 +56,13 @@ const App: Component = () => {
 
   const projects: Project[] = [
     {
+      name: "STUD-lib",
+      desc: `Simple "STD" lib for C. Anything you might need while programming in C.`,
+      date: "2024 – Present",
+      url: "https://github.com/tofuddreg/studlib",
+      tags: [{ name: "C99" }, { name: "Library" }],
+    },
+    {
       name: "Deployer",
       desc: `Deployer will automatically check your repository for new commits, 
       pull the newest version of your project, build and setup it as you wish.`,
@@ -81,7 +88,7 @@ const App: Component = () => {
       desc: `It's not like "Snake"! Fundamentally different concept!`,
       url: "https://github.com/tofuddreg/cnake",
       date: "2024",
-      tags: [{ name: "C" }, { name: "Software" }],
+      tags: [{ name: "C99" }, { name: "Software" }],
     },
     {
       name: "IRC-lib",
@@ -89,7 +96,7 @@ const App: Component = () => {
       url: "https://github.com/tofuddreg/irclib",
       date: "2024",
       image: banner2,
-      tags: [{ name: "C" }, { name: "Software" }],
+      tags: [{ name: "C99" }, { name: "Library" }],
     },
     {
       name: "LMDB",
