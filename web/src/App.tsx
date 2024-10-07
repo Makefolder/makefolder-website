@@ -17,6 +17,7 @@ import mail from "./assets/mail.svg";
 import banner from "./assets/banner.png";
 import banner2 from "./assets/banner2.png";
 import portfolio from "./assets/banner-portfolio.png";
+import banner_cnake from "./assets/banner_cnake.png";
 
 const App: Component = () => {
     const education: Project[] = [
@@ -96,6 +97,7 @@ const App: Component = () => {
             desc: `It's not like "Snake"! Fundamentally different concept!`,
             url: "https://github.com/tofuddreg/cnake",
             date: "2024",
+            image: banner_cnake,
             tags: [{ name: "C99" }, { name: "Software" }],
         },
         {
