@@ -123,7 +123,9 @@ const App: Component = () => {
         },
         {
             name: "Discord bot",
-            desc: `Discord bot for servers written in Java.`,
+            desc: `This project is a simple Discord bot developed in Java,
+            designed to enhance the Discord experience for users by providing
+            various interactive features (a bit of lie here for sure).`,
             url: "https://github.com/tofuddreg/aegibot",
             date: "2023",
             tags: [{ name: "Java" }, { name: "Software" }],
