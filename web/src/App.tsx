@@ -68,22 +68,22 @@ const App: Component = () => {
             name: "STUD-lib",
             desc: `Simple "STD" lib for C. Anything you might need while programming in C.`,
             date: "2024 – Present",
-            url: "https://github.com/tofuddreg/studlib",
+            url: "https://github.com/makefolder/studlib",
             tags: [{ name: "C99" }, { name: "Library" }],
         },
         {
             name: "Deployer",
             desc: `Deployer will automatically check your repository for new commits, 
-      pull the newest version of your project, build and setup it as you wish.`,
+      pull the newest version of your project, build and set it up as you wish.`,
             date: "2024 – Present",
-            url: "https://github.com/tofuddreg/tofuddreg-website",
+            url: "https://github.com/makefolder/makefolder-website",
             tags: [{ name: "Rust" }, { name: "Software" }],
         },
         {
             name: "Portfolio",
             desc: `My portfolio website.`,
             date: "2024",
-            url: "https://github.com/tofuddreg/tofuddreg-website",
+            url: "https://github.com/makefolder/makefolder-website",
             image: portfolio,
             tags: [
                 { name: "Solidjs" },
@@ -95,7 +95,7 @@ const App: Component = () => {
         {
             name: "Cnake",
             desc: `It's not like "Snake"! Fundamentally different concept!`,
-            url: "https://github.com/tofuddreg/cnake",
+            url: "https://github.com/makefolder/cnake",
             date: "2024",
             image: banner_cnake,
             tags: [{ name: "C99" }, { name: "Software" }],
@@ -103,7 +103,7 @@ const App: Component = () => {
         {
             name: "IRC-lib",
             desc: `Simple Internet Relay Chat library for C.`,
-            url: "https://github.com/tofuddreg/irclib",
+            url: "https://github.com/makefolder/irclib",
             date: "2024",
             image: banner2,
             tags: [{ name: "C99" }, { name: "Library" }],
@@ -111,7 +111,7 @@ const App: Component = () => {
         {
             name: "LMDB",
             desc: `LMDB is a local movie database.`,
-            url: "https://github.com/tofuddreg/lmdb",
+            url: "https://github.com/makefolder/lmdb",
             date: "2024",
             image: banner,
             tags: [
@@ -126,7 +126,7 @@ const App: Component = () => {
             desc: `This project is a simple Discord bot developed in Java,
             designed to enhance the Discord experience for users by providing
             various interactive features (a bit of lie here for sure).`,
-            url: "https://github.com/tofuddreg/aegibot",
+            url: "https://github.com/makefolder/aegibot",
             date: "2023",
             tags: [{ name: "Java" }, { name: "Software" }],
         },
