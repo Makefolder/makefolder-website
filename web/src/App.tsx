@@ -155,7 +155,7 @@ const App: Component = () => {
     const soc_media: Link[] = [
         {
             name: "leetcode",
-            url: "https://leetcode.com/u/aegislash525/",
+            url: "https://leetcode.com/u/makefolder/",
             icon: leetcode,
         },
         {
