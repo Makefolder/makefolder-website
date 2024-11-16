@@ -4,6 +4,9 @@ import { Tag as TagComp } from "./Tag";
 
 import type { Tag } from "../types/Tag";
 import card from "./card.module.css";
+
+import { Icon } from "solid-heroicons";
+import { checkBadge } from "solid-heroicons/solid";
 import arrow from "../assets/arrow.png";
 
 export const Card: Component<{
@@ -12,6 +15,7 @@ export const Card: Component<{
   title: string;
   desc: string;
   section: string;
+  certificate?: boolean;
   url?: string;
   image?: string;
   tags?: Tag[];
@@ -76,13 +80,26 @@ export const Card: Component<{
       <div class="overflow-hidden">
         <a href={props.url} target="_blank">
           <div class="flex flex-col gap-4">
-            <div class="flex items-center gap-2">
+            <div class="flex items-center gap-2 nuts">
               <div
                 class="transition leading-tight"
                 classList={{ [card.props_title]: true }}
               >
                 {props.title}
               </div>
+              <Show
+                when={
+                  props.certificate !== undefined && props.certificate === true
+                }
+              >
+                <Icon
+                  path={checkBadge}
+                  classList={{
+                    [card.nuts]: true,
+                    [card.nuts_hover]: props.hover,
+                  }}
+                />
+              </Show>
               <Show when={props.url !== undefined && props.url !== ""}>
                 <div class={card.arrow} classList={{ transition: true }}>
                   <img src={arrow} alt="" />
