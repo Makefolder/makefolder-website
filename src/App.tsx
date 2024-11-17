@@ -95,14 +95,6 @@ const App: Component = () => {
       ],
     },
     {
-      name: "Cnake",
-      desc: `It's not like "Snake"! Fundamentally different concept!`,
-      url: "https://github.com/makefolder/cnake",
-      date: "2024",
-      image: banner_cnake,
-      tags: [{ name: "C99" }, { name: "Software" }],
-    },
-    {
       name: "IRC-lib",
       desc: `Simple Internet Relay Chat library for C.`,
       url: "https://github.com/makefolder/irclib",
