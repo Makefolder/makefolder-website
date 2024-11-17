@@ -9,14 +9,7 @@
 
 # Portfolio website
 
-## Gleam
-
-```sh
-gleam run   # Run the project
-gleam test  # Run the tests
-```
-
-## Frontend usage
+## Usage
 
 Those templates dependencies are maintained via [pnpm](https://pnpm.io) via `pnpm up -Lri`.
 
