@@ -60,8 +60,8 @@ const App: Component = () => {
         { name: "Rust" },
         { name: "Bun" },
         { name: "TypeScript" },
-        { name: "Backend" },
         { name: "Docker" },
+        { name: "Backend" }
       ],
     },
   ];
