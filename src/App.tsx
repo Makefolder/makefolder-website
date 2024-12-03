@@ -68,11 +68,14 @@ const App: Component = () => {
 
   const projects: Project[] = [
     {
-      name: "STUD-lib",
-      desc: `Simple "STD" lib for C. Anything you might need while programming in C.`,
+      name: "Shared Place",
+      desc: "Nodescyet :P",
       date: "2024 – Present",
-      url: "https://github.com/makefolder/studlib",
-      tags: [{ name: "C99" }, { name: "Library" }],
+      url: "https://github.com/h3s0y4mchik/shared-place",
+      tags: [
+        { name: "Go" },
+        { name: "Software" }
+      ]
     },
     {
       name: "Deployer",
@@ -80,7 +83,21 @@ const App: Component = () => {
       pull the newest version of your project, build and set it up as you wish.`,
       date: "2024 – Present",
       url: "https://github.com/makefolder/makefolder-website",
-      tags: [{ name: "Rust" }, { name: "Software" }],
+      tags: [
+        { name: "Rust" }, 
+        { name: "Software" }, 
+        { name: "CI/CD" }
+      ],
+    },
+    {
+      name: "STUD-lib",
+      desc: `Simple "STD" lib for C. Anything you might need while programming in C.`,
+      date: "2024",
+      url: "https://github.com/makefolder/studlib",
+      tags: [
+        { name: "C99" }, 
+        { name: "Library" }
+      ],
     },
     {
       name: "Portfolio",
@@ -114,16 +131,7 @@ const App: Component = () => {
         { name: "TypeScript" },
         { name: "Full-stack" },
       ],
-    },
-    {
-      name: "Discord bot",
-      desc: `This project is a simple Discord bot developed in Java,
-            designed to enhance the Discord experience for users by providing
-            various interactive features (a bit of lie here for sure).`,
-      url: "https://github.com/makefolder/aegibot",
-      date: "2023",
-      tags: [{ name: "Java" }, { name: "Software" }],
-    },
+    }
   ];
 
   const links: Link[] = [
