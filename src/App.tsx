@@ -161,7 +161,7 @@ CMS functionality. The platform now serves over 1,000 daily visitors.`,
     },
     {
       name: "linkedin",
-      url: "https://www.linkedin.com/in/artemii-fedotov-77809b260/",
+      url: "https://www.linkedin.com/in/artemii-fedotov/",
       icon: linkedin,
     },
     {
