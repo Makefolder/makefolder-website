@@ -17,9 +17,15 @@ import mail from "./assets/mail.svg";
 import banner from "./assets/banner.png";
 import banner2 from "./assets/banner2.png";
 import portfolio from "./assets/banner-portfolio.png";
-import banner_cnake from "./assets/banner_cnake.png";
 
 const App: Component = () => {
+  const about_me = `I am self-taught and highly motivated programmer with extensive hands-on experience in multiple
+programming languages and technologies. Proficient in solving complex coding challenges and creating
+software solutions. Proven ability to adapt and thrive in professional environments despite the absence of a
+formal degree. Highly adaptable and dedicated to delivering high-quality results under tight deadlines.`;
+
+  const additional = `I am open-minded, responsible, good in English and Slovak, fluent in Ukrainian and Russian.`;
+
   const education: Project[] = [
     {
       date: "2024 – Present",
@@ -40,8 +46,7 @@ const App: Component = () => {
   const experience: Project[] = [
     {
       name: "BEST Košice",
-      desc: `I have become a member of international organisation BEST that has an
-        office in Košice.`,
+      desc: `I have become a member of international organisation BEST.`,
       url: "https://best.tuke.sk/",
       date: "2024 – Present",
       certificate: false,
@@ -49,8 +54,8 @@ const App: Component = () => {
     },
     {
       name: "Olywka",
-      desc: `Olywka is a commercial Ukrainian online clothing shop.
-          My task in the team is backend development and server configuration.`,
+      desc: `We developed Olywka Shop from scratch into a production-ready online clothing store with built-in CRM and
+CMS functionality. The platform now serves over 1,000 daily visitors.`,
       url: "https://olywka-shop.com.ua/",
       date: "2024 – Present",
       certificate: false,
@@ -61,7 +66,7 @@ const App: Component = () => {
         { name: "Bun" },
         { name: "TypeScript" },
         { name: "Docker" },
-        { name: "Backend" }
+        { name: "Backend" },
       ],
     },
   ];
@@ -69,35 +74,24 @@ const App: Component = () => {
   const projects: Project[] = [
     {
       name: "Shared Place",
-      desc: "Nodescyet :P",
+      desc: "Share your folder with your devices via your server.",
       date: "2024 – Present",
       url: "https://github.com/h3s0y4mchik/shared-place",
-      tags: [
-        { name: "Go" },
-        { name: "Software" }
-      ]
+      tags: [{ name: "Go" }, { name: "Software" }],
     },
     {
       name: "Deployer",
-      desc: `Deployer will automatically check your repository for new commits, 
-      pull the newest version of your project, build and set it up as you wish.`,
-      date: "2024 – Present",
+      desc: `The tool eliminates manual intervention by automatically pulling repositories, building projects, and managing server deployments.`,
+      date: "2024",
       url: "https://github.com/makefolder/makefolder-website",
-      tags: [
-        { name: "Rust" }, 
-        { name: "Software" }, 
-        { name: "CI/CD" }
-      ],
+      tags: [{ name: "Rust" }, { name: "Software" }, { name: "CI/CD" }],
     },
     {
       name: "STUD-lib",
       desc: `Simple "STD" lib for C. Anything you might need while programming in C.`,
       date: "2024",
       url: "https://github.com/makefolder/studlib",
-      tags: [
-        { name: "C99" }, 
-        { name: "Library" }
-      ],
+      tags: [{ name: "C99" }, { name: "Library" }],
     },
     {
       name: "Portfolio",
@@ -131,7 +125,7 @@ const App: Component = () => {
         { name: "TypeScript" },
         { name: "Full-stack" },
       ],
-    }
+    },
   ];
 
   const links: Link[] = [
@@ -214,16 +208,8 @@ const App: Component = () => {
         {/* right-side */}
         <div class="right__resize max-w-[580px] flex flex-col flex-shrink-0 gap-[8.8rem] my-[100px]">
           <Section id="about-me" title="About me">
-            <p class="text-[#94A3B8]">
-              I am a self-taught programmer with a strong passion for learning
-              new technologies and programming languages. I am known for my
-              curiosity, problem-solving skills, and dedication to delivering
-              quality work on time.
-            </p>
-            <p class="text-[#94A3B8]">
-              I am open-minded, responsible, good in English and Slovak, fluent
-              in Ukrainian and Russian.
-            </p>
+            <p class="text-[#94A3B8]">{about_me}</p>
+            <p class="text-[#94A3B8]">{additional}</p>
           </Section>
 
           <Section id="education" title="Education">
